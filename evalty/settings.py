@@ -131,6 +131,8 @@ INSTALLED_APPS = (
     'gunicorn',
 
     # local apps
+    'classes',
+    'users',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -191,9 +193,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
-HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
