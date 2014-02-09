@@ -14,8 +14,3 @@ urlpatterns = patterns('',
     url(r'^professor/$', professor, name='prof'),
     url(r'^admin/', include(admin.site.urls)),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-
-urlpatterns += patterns('',
-	(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-)
