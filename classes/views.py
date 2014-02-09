@@ -14,3 +14,11 @@ from django.http import Http404
 def home(request):
     """Home view"""
     return render_to_response('splash.html', {}, RequestContext(request))
+
+def student(request):
+    """Student view"""
+    return render_to_response('student.html', {'student':True}, RequestContext(request))
+
+def professor(request):
+    """Professor view"""
+    return render_to_response('professor.html', {'professor':True}, RequestContext(request))
