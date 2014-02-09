@@ -13,4 +13,4 @@ urlpatterns = patterns('',
     url(r'^student/$', student, name='student'),
     url(r'^professor/$', professor, name='prof'),
     url(r'^admin/', include(admin.site.urls)),
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+)
