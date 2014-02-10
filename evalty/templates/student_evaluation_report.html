@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load i18n %}
+{% load url from future %}
+
+{% block extra_style %}
+<style type="text/css">
+
+.evaluations {
+  border:1px solid #acacac;
+  padding: 10px;
+}
+
+.evaluationBtn {
+  background: rgb(84,121, 128);
+  width: 160px;
+  height: 135px;
+  color:white;
+  display: inline-block;
+}
+
+.evalMainText {
+  vertical-align: center;
+}
+
+.progress {
+  margin-bottom: 0px;
+}
+
+.media-object {
+  max-width: 64px;
+  max-height: 64px;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-lg-12">
+      <h3>UGBA 105 - Project 3 Report</h3>
+      <p class="lead">What your teammates think about you?</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-10">
+      <div class="row">
+        <div class="col-lg-6">
+          <p>Contribution to team's work</p>
+          <div class="text-left">        
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">You</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">Team</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p>Interacting with teammates</p>
+          <div class="text-left">        
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 87%;">You</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">Team</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p>Keeping the team on track</p>
+          <div class="text-left">        
+            <div class="progress">
+              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">You</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 67%;">Team</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p>Expecting Quality</p>
+          <div class="text-left">        
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">You</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 73%;">Team</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p>Having relevant knowledge, skills, and abilities</p>
+          <div class="text-left">        
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 57%;">You</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 67%;">Team</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="col-lg-12">
+          <p class="lead">Strengths</p>
+          <ul>
+            <li>Highly createive</li>
+            <li>Quick learner</li>
+            <li>Lively</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <p class="lead">Weaknesses</p>
+          <ul>
+            <li>Not assertive enough</li>
+            <li>Shy</li>
+            <li>Can come off as arrogant at times</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-2">
+      <div class="thumbnail text-center">
+        <h4>Teammates</h4>
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/t1/c3.0.160.160/p160x160/1474590_10152026189784110_1340713522_n.jpg" alt="...">
+          </a>
+          <div class="media-body">
+            <p class="media-heading">Sanchit</p>
+          </div>
+        </div>
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" src="http://i1.cdnds.net/13/12/618x959/bill-gates-mugshot.jpg" alt="...">
+          </a>
+          <div class="media-body">
+            <p class="media-heading">Bill</p>
+          </div>
+        </div>
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" src="http://rairangpuriti.org/images/courses/global-student-usa-preferred-insurance.jpg" alt="...">
+          </a>
+          <div class="media-body">
+            <p class="media-heading">Cindy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
